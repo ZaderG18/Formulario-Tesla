@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta lang="pt-br">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/aula.css">
+	<link rel="shortcut icon" type="imagex/png" href="./imagens/2_Motors.svg.png">
+	<title>aula2024</title>
+</head>
+<body>
+	<div class="background-img">
+		<div class="background-opacity">
+			<div class="center-logo">
+				<img src="imagens/Tesla_Motors.svg.png" id="logo-tesla" alt="" >	
+			</div>
+	<form class="caixa" id="" action="php/conexao.php" method="post" enctype="multipart/form-data" target="_blank">
+		<center>
+			<h2 style=" padding: 20px 0;">Bem vindo</h2>
+			<div class="box-input">
+				<label for="name" onmouseover="this.style.color='red'"; onmouseout="this.style.color='white'">Nome:</label>
+				<input type="text" id="nome" name="nome" placeholder="insira seu nome">	
+			</div>
+		<br>
+		<div class="box-input">
+			<label for="name" onmouseover="this.style.color='red'"; onmouseout="this.style.color='white'">Sobrenome:</label>
+			<div class="input-container">
+			<input type="text" name="sobrenome" placeholder="insira seu sobrenome" id="sobrenome" onkeyup="verificaNome()">
+		</div>		
+		</div>
+		<br>
+		<div class="box-input">
+			<label for="telefone" onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Telefone:</label>
+			<input type="tel" name="telefone" placeholder="Insira seu telefone" id="telefone" onkeyup="verificaNome() ,verificaSobrenome()">
+		</div>
+		<br>
+		<div class="box-input">
+			<label for="email" onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Email:</label>
+			<input type="email" name="email" placeholder="Insira seu Email" id="email" onkeyup="verificaNome(), verificaSobrenome(), verificaTelefone()">
+		</div>
+		<br>
+		<div class="box-input">
+			<label for="text" onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Rua:</label>
+			<input type="text" name="rua" placeholder="Insira seu endereço" id="rua" onkeyup="verificaNome(), verificaSobrenome(), verificaTelefone(), verificarEmail()">
+		</div>
+		<br>
+		<div class="box-input">
+			<label for="text" onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Cidade:</label>
+			<input type="text" name="cidade" placeholder="Insira a sua Cidade" id="cidade" onkeyup="verificaNome(), verificaSobrenome(), verificaTelefone(), verificarEmail(), verificarRua()">
+		</div>
+		<br>
+		<div class="box-input">
+			<label for="text" onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">UF:</label>
+			<input type="text" name="UF" placeholder="insira a UF" id="UF" onkeyup="verificaNome(), verificaSobrenome(), verificaTelefone(), verificarCidade(), verificarEmail(), verificarRua()">
+		</div>
+		<br>
+		<button type="submit" value="Enviar">Enviar</button>	
+		</div>
+		<h6 onkeyup="informacoes()"></h6>
+	</div>
+</center>
+</form>
+<script src="js/aula.js"></script>
+<?php
+include_once('php/processamento.php');
+echo "Seus dados inseridos são '$email' '$RM' '$senha'"
+?>
+</body>
+</html>
